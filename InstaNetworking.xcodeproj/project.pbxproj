@@ -13,6 +13,11 @@
 		A6D2F6F123EB80B000975139 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D2F6EF23EB80B000975139 /* Main.storyboard */; };
 		A6D2F6F323EB80B100975139 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6D2F6F223EB80B100975139 /* Assets.xcassets */; };
 		A6D2F6F623EB80B100975139 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D2F6F423EB80B100975139 /* LaunchScreen.storyboard */; };
+		A6D2F6FF23EB81E100975139 /* InstaEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2F6FE23EB81E100975139 /* InstaEndPoint.swift */; };
+		A6D2F70123EB832000975139 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2F70023EB832000975139 /* NetworkRouter.swift */; };
+		A6D2F70323EB841F00975139 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2F70223EB841F00975139 /* ParameterEncoder.swift */; };
+		A6D2F70623EB862100975139 /* URLParameteersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2F70523EB862100975139 /* URLParameteersEncoder.swift */; };
+		A6D2F70823EB862E00975139 /* JSONParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2F70723EB862E00975139 /* JSONParametersEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		A6D2F6F223EB80B100975139 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6D2F6F523EB80B100975139 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6D2F6F723EB80B100975139 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6D2F6FE23EB81E100975139 /* InstaEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaEndPoint.swift; sourceTree = "<group>"; };
+		A6D2F70023EB832000975139 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		A6D2F70223EB841F00975139 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		A6D2F70523EB862100975139 /* URLParameteersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameteersEncoder.swift; sourceTree = "<group>"; };
+		A6D2F70723EB862E00975139 /* JSONParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParametersEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		A6D2F6E823EB80B000975139 /* InstaNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				A6D2F6FD23EB81C300975139 /* Network Layer */,
 				A6D2F6E923EB80B000975139 /* AppDelegate.swift */,
 				A6D2F6EB23EB80B000975139 /* SceneDelegate.swift */,
 				A6D2F6ED23EB80B000975139 /* ViewController.swift */,
@@ -65,6 +76,26 @@
 				A6D2F6F723EB80B100975139 /* Info.plist */,
 			);
 			path = InstaNetworking;
+			sourceTree = "<group>";
+		};
+		A6D2F6FD23EB81C300975139 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				A6D2F70423EB860500975139 /* Encoding */,
+				A6D2F6FE23EB81E100975139 /* InstaEndPoint.swift */,
+				A6D2F70023EB832000975139 /* NetworkRouter.swift */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		A6D2F70423EB860500975139 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				A6D2F70223EB841F00975139 /* ParameterEncoder.swift */,
+				A6D2F70523EB862100975139 /* URLParameteersEncoder.swift */,
+				A6D2F70723EB862E00975139 /* JSONParametersEncoder.swift */,
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6D2F70323EB841F00975139 /* ParameterEncoder.swift in Sources */,
 				A6D2F6EE23EB80B000975139 /* ViewController.swift in Sources */,
 				A6D2F6EA23EB80B000975139 /* AppDelegate.swift in Sources */,
+				A6D2F70123EB832000975139 /* NetworkRouter.swift in Sources */,
+				A6D2F70823EB862E00975139 /* JSONParametersEncoder.swift in Sources */,
+				A6D2F70623EB862100975139 /* URLParameteersEncoder.swift in Sources */,
+				A6D2F6FF23EB81E100975139 /* InstaEndPoint.swift in Sources */,
 				A6D2F6EC23EB80B000975139 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
