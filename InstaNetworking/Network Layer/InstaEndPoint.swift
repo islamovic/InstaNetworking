@@ -20,7 +20,7 @@ class InstaEndPoint {
 
     var path      : String?
     var headers   : HTTPHeaders?
-    var method    : HTTPMethod?
+    var method    : HTTPMethod
     var parameters: Parameters?
 
     init(path: String? = nil,

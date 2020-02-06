@@ -8,7 +8,7 @@
 
 import Foundation
 
-public typealias NetworkRouterSuccessCompletion = (_ data: Data?, _ response: URLResponse) -> ()
+public typealias NetworkRouterSuccessCompletion = (_ data: Data, _ response: URLResponse) -> ()
 public typealias NetworkRouterFailedCompletion = (_ error: Error) -> ()
 
 protocol NetworkRouter {
