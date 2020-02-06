@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-final class RequestOperation: InstaOperation {
+class RequestOperation: InstaOperation {
 
     private var task    : URLSessionTask?
     private let endPoint: InstaEndPoint?
@@ -16,6 +17,8 @@ final class RequestOperation: InstaOperation {
     private let baseURL : URL?
     private let success : NetworkRouterSuccessCompletion
     private let failure : NetworkRouterFailedCompletion
+
+    var backgroundTask: UIBackgroundTaskIdentifier = .invalid
 
     init(task: URLSessionTask?,
          endPoint: InstaEndPoint?,
@@ -30,10 +33,12 @@ final class RequestOperation: InstaOperation {
         self.baseURL  = baseURL
         self.success  = success
         self.failure  = failure
+
+        super.init()
+        registerBackgroundTask()
     }
 
-    override func main() {
-
+    @objc func request() {
         if let session = session, let endpoint = endPoint {
             do {
                 let request = try self.buildRequest(from: endpoint)
@@ -56,7 +61,15 @@ final class RequestOperation: InstaOperation {
                 finish()
             }
             self.task?.resume()
+        } else {
+            if backgroundTask != .invalid {
+              endBackgroundTask()
+            }
         }
+    }
+
+    override func main() {
+        request()
     }
 }
 
@@ -116,4 +129,23 @@ extension RequestOperation {
         }
         return isSuccessCode(urlResponse.statusCode)
     }
+
+    func registerBackgroundTask() {
+      backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
+        self?.endBackgroundTask()
+      }
+      assert(backgroundTask != .invalid)
+    }
+
+    func endBackgroundTask() {
+      UIApplication.shared.endBackgroundTask(backgroundTask)
+      backgroundTask = .invalid
+    }
+
+    @objc func reinstateBackgroundTask() {
+      if backgroundTask == .invalid {
+        registerBackgroundTask()
+      }
+    }
+
 }

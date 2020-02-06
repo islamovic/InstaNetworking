@@ -13,8 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        testGetRequest()
-        testPostRequest()
+        for _ in 0..<1000 {
+            testGetRequest()
+            testPostRequest()
+        }
     }
 }
 

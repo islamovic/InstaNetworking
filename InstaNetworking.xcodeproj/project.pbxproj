@@ -23,6 +23,16 @@
 		A6D2F70E23EC439A00975139 /* InstaOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2F70D23EC439A00975139 /* InstaOperation.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A6D2F71823EC8FFB00975139 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6D2F6DE23EB80B000975139 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6D2F6E523EB80B000975139;
+			remoteInfo = InstaNetworking;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		A6D2F6E623EB80B000975139 /* InstaNetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaNetworking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D2F6E923EB80B000975139 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,10 +50,18 @@
 		A6D2F70923EB873800975139 /* InstaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaRouter.swift; sourceTree = "<group>"; };
 		A6D2F70B23EC438B00975139 /* RequestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOperation.swift; sourceTree = "<group>"; };
 		A6D2F70D23EC439A00975139 /* InstaOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaOperation.swift; sourceTree = "<group>"; };
+		A6D2F71323EC8FFB00975139 /* InstaNetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaNetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A6D2F6E323EB80B000975139 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6D2F71023EC8FFB00975139 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -65,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				A6D2F6E623EB80B000975139 /* InstaNetworking.app */,
+				A6D2F71323EC8FFB00975139 /* InstaNetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +146,24 @@
 			productReference = A6D2F6E623EB80B000975139 /* InstaNetworking.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A6D2F71223EC8FFB00975139 /* InstaNetworkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6D2F71A23EC8FFB00975139 /* Build configuration list for PBXNativeTarget "InstaNetworkingTests" */;
+			buildPhases = (
+				A6D2F70F23EC8FFB00975139 /* Sources */,
+				A6D2F71023EC8FFB00975139 /* Frameworks */,
+				A6D2F71123EC8FFB00975139 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6D2F71923EC8FFB00975139 /* PBXTargetDependency */,
+			);
+			name = InstaNetworkingTests;
+			productName = InstaNetworkingTests;
+			productReference = A6D2F71323EC8FFB00975139 /* InstaNetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -139,6 +176,10 @@
 				TargetAttributes = {
 					A6D2F6E523EB80B000975139 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					A6D2F71223EC8FFB00975139 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = A6D2F6E523EB80B000975139;
 					};
 				};
 			};
@@ -156,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				A6D2F6E523EB80B000975139 /* InstaNetworking */,
+				A6D2F71223EC8FFB00975139 /* InstaNetworkingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -168,6 +210,13 @@
 				A6D2F6F623EB80B100975139 /* LaunchScreen.storyboard in Resources */,
 				A6D2F6F323EB80B100975139 /* Assets.xcassets in Resources */,
 				A6D2F6F123EB80B000975139 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6D2F71123EC8FFB00975139 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +241,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6D2F70F23EC8FFB00975139 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6D2F71923EC8FFB00975139 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6D2F6E523EB80B000975139 /* InstaNetworking */;
+			targetProxy = A6D2F71823EC8FFB00975139 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A6D2F6EF23EB80B000975139 /* Main.storyboard */ = {
@@ -332,6 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VW46WHVYZR;
 				INFOPLIST_FILE = InstaNetworking/Info.plist;
@@ -341,6 +406,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AppLineup.InstaNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -350,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VW46WHVYZR;
 				INFOPLIST_FILE = InstaNetworking/Info.plist;
@@ -359,8 +426,49 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AppLineup.InstaNetworking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A6D2F71B23EC8FFB00975139 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VW46WHVYZR;
+				INFOPLIST_FILE = InstaNetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppLineup.InstaNetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstaNetworking.app/InstaNetworking";
+			};
+			name = Debug;
+		};
+		A6D2F71C23EC8FFB00975139 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VW46WHVYZR;
+				INFOPLIST_FILE = InstaNetworkingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = AppLineup.InstaNetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstaNetworking.app/InstaNetworking";
 			};
 			name = Release;
 		};
@@ -381,6 +489,15 @@
 			buildConfigurations = (
 				A6D2F6FB23EB80B100975139 /* Debug */,
 				A6D2F6FC23EB80B100975139 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6D2F71A23EC8FFB00975139 /* Build configuration list for PBXNativeTarget "InstaNetworkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6D2F71B23EC8FFB00975139 /* Debug */,
+				A6D2F71C23EC8FFB00975139 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
