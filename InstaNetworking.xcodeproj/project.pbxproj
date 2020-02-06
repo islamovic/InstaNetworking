@@ -19,6 +19,8 @@
 		A6D2F70623EB862100975139 /* URLParameteersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2F70523EB862100975139 /* URLParameteersEncoder.swift */; };
 		A6D2F70823EB862E00975139 /* JSONParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2F70723EB862E00975139 /* JSONParametersEncoder.swift */; };
 		A6D2F70A23EB873800975139 /* InstaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2F70923EB873800975139 /* InstaRouter.swift */; };
+		A6D2F70C23EC438B00975139 /* RequestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2F70B23EC438B00975139 /* RequestOperation.swift */; };
+		A6D2F70E23EC439A00975139 /* InstaOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D2F70D23EC439A00975139 /* InstaOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		A6D2F70523EB862100975139 /* URLParameteersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameteersEncoder.swift; sourceTree = "<group>"; };
 		A6D2F70723EB862E00975139 /* JSONParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParametersEncoder.swift; sourceTree = "<group>"; };
 		A6D2F70923EB873800975139 /* InstaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaRouter.swift; sourceTree = "<group>"; };
+		A6D2F70B23EC438B00975139 /* RequestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOperation.swift; sourceTree = "<group>"; };
+		A6D2F70D23EC439A00975139 /* InstaOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				A6D2F6FE23EB81E100975139 /* InstaEndPoint.swift */,
 				A6D2F70023EB832000975139 /* NetworkRouter.swift */,
 				A6D2F70923EB873800975139 /* InstaRouter.swift */,
+				A6D2F70B23EC438B00975139 /* RequestOperation.swift */,
+				A6D2F70D23EC439A00975139 /* InstaOperation.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
@@ -179,8 +185,10 @@
 				A6D2F70123EB832000975139 /* NetworkRouter.swift in Sources */,
 				A6D2F70823EB862E00975139 /* JSONParametersEncoder.swift in Sources */,
 				A6D2F70623EB862100975139 /* URLParameteersEncoder.swift in Sources */,
+				A6D2F70E23EC439A00975139 /* InstaOperation.swift in Sources */,
 				A6D2F6FF23EB81E100975139 /* InstaEndPoint.swift in Sources */,
 				A6D2F6EC23EB80B000975139 /* SceneDelegate.swift in Sources */,
+				A6D2F70C23EC438B00975139 /* RequestOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
