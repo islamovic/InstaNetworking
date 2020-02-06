@@ -7,12 +7,19 @@
 //
 
 import Foundation
+import Network
 
 class InstaRouter: NetworkRouter {
 
     private var task: URLSessionTask?
     private var session: URLSession?
     private var queue = OperationQueue()
+
+    let wifiMonitor = NWPathMonitor(requiredInterfaceType: .wifi)
+    let wifiQueue = DispatchQueue(label: "InternetWIFIConnectionMonitor")
+
+    let celluarMonitor = NWPathMonitor(requiredInterfaceType: .cellular)
+    let celluarQueue = DispatchQueue(label: "InternetCELLUARConnectionMonitor")
 
     var baseURL: URL?
 
@@ -29,6 +36,20 @@ class InstaRouter: NetworkRouter {
         queue.maxConcurrentOperationCount = 6
         queue.qualityOfService = .default
         queue.waitUntilAllOperationsAreFinished()
+
+        wifiMonitor.pathUpdateHandler = { pathUpdateHandler in
+            if pathUpdateHandler.status == .satisfied {
+                self.queue.maxConcurrentOperationCount = 6
+            }
+        }
+        wifiMonitor.start(queue: wifiQueue)
+
+        celluarMonitor.pathUpdateHandler = { pathUpdateHandler in
+            if pathUpdateHandler.status == .satisfied {
+                self.queue.maxConcurrentOperationCount = 2
+            }
+        }
+        celluarMonitor.start(queue: celluarQueue)
     }
 
     public static let shared = InstaRouter()
