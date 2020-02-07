@@ -1,0 +1,11 @@
+framework module InstaNetwork {
+  umbrella header "InstaNetwork.h"
+
+  export *
+  module * { export * }
+}
+
+module InstaNetwork.Swift {
+    header "InstaNetwork-Swift.h"
+    requires objc
+}
