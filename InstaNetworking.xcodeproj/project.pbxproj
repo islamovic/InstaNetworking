@@ -71,6 +71,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A609BD4823ECE45F0090B408 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A6D2F6FE23EB81E100975139 /* InstaEndPoint.swift */,
+				A6D2F70023EB832000975139 /* NetworkRouter.swift */,
+				A6D2F70923EB873800975139 /* InstaRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A609BD4923ECE46A0090B408 /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				A6D2F70B23EC438B00975139 /* RequestOperation.swift */,
+				A6D2F70D23EC439A00975139 /* InstaOperation.swift */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
 		A6D2F6DD23EB80B000975139 = {
 			isa = PBXGroup;
 			children = (
@@ -106,12 +125,9 @@
 		A6D2F6FD23EB81C300975139 /* Network Layer */ = {
 			isa = PBXGroup;
 			children = (
+				A609BD4923ECE46A0090B408 /* Operation */,
+				A609BD4823ECE45F0090B408 /* Router */,
 				A6D2F70423EB860500975139 /* Encoding */,
-				A6D2F6FE23EB81E100975139 /* InstaEndPoint.swift */,
-				A6D2F70023EB832000975139 /* NetworkRouter.swift */,
-				A6D2F70923EB873800975139 /* InstaRouter.swift */,
-				A6D2F70B23EC438B00975139 /* RequestOperation.swift */,
-				A6D2F70D23EC439A00975139 /* InstaOperation.swift */,
 			);
 			path = "Network Layer";
 			sourceTree = "<group>";
