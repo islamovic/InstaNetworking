@@ -16,17 +16,17 @@ public enum HTTPMethod: String {
     case post = "POST"
 }
 
-class InstaEndPoint {
+public class InstaEndPoint {
 
     var path      : String?
     var headers   : HTTPHeaders?
     var method    : HTTPMethod
     var parameters: Parameters?
 
-    init(path: String? = nil,
-         parameters: Parameters? = nil,
-         headers: HTTPHeaders? = nil,
-         method: HTTPMethod) {
+    public init(path: String? = nil,
+          parameters: Parameters? = nil,
+             headers: HTTPHeaders? = nil,
+              method: HTTPMethod) {
 
         self.path       = path
         self.headers    = headers

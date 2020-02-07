@@ -11,7 +11,7 @@ import Foundation
 public typealias NetworkRouterSuccessCompletion = (_ data: Data, _ response: URLResponse) -> ()
 public typealias NetworkRouterFailedCompletion = (_ error: Error) -> ()
 
-protocol NetworkRouter {
+public protocol NetworkRouter {
     associatedtype EndPoint: InstaEndPoint
     func request(_ route: EndPoint, success: @escaping NetworkRouterSuccessCompletion, failure: @escaping NetworkRouterFailedCompletion)
     func cancel()

@@ -9,7 +9,7 @@
 import Foundation
 import Network
 
-class InstaRouter: NetworkRouter {
+public class InstaRouter: NetworkRouter {
 
     private var task: URLSessionTask?
     private var session: URLSession?
@@ -21,7 +21,7 @@ class InstaRouter: NetworkRouter {
     let celluarMonitor = NWPathMonitor(requiredInterfaceType: .cellular)
     let celluarQueue = DispatchQueue(label: "InternetCELLUARConnectionMonitor")
 
-    var baseURL: URL?
+    public var baseURL: URL?
 
     private init() {
         let configuration = URLSessionConfiguration.default
@@ -54,7 +54,7 @@ class InstaRouter: NetworkRouter {
 
     public static let shared = InstaRouter()
 
-    func request(_ route: InstaEndPoint,
+    public func request(_ route: InstaEndPoint,
                  success: @escaping NetworkRouterSuccessCompletion,
                  failure: @escaping NetworkRouterFailedCompletion) {
 
@@ -67,7 +67,7 @@ class InstaRouter: NetworkRouter {
         queue.addOperation(requestOperation)
     }
 
-    func cancel() {
+    public func cancel() {
         self.task?.cancel()
     }
 }
